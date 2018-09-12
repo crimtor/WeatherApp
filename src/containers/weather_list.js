@@ -5,10 +5,13 @@ import GoogleMap from "../components/google_map";
 
 class WeatherList extends Component {
   renderWeather(cityData) {
+    if (!cityData.main){
+      return null;
+    }
     const name = cityData.name;
     let temp = cityData.main.temp;
-    let visWord = "";
     const tempF = Math.floor(1.8 * (temp - 273) + 32);
+    let visWord = "";
     const visibility = cityData.visibility;
     if (visibility < 100){
       visWord = "Zero Visibility";

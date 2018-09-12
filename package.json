@@ -5,7 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/crimtor/WeatherApp.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "transpile": "babel src -d dist --copy-files",
+    "build": "webpack --mode production"
   },
   "author": "Shawn T Fox",
   "license": "ISC",
